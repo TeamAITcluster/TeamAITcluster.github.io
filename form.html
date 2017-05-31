@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
+    <link rel="stylesheet" href="style.css">  
+    <script src="form.js"></script>
+</head>
+
+<body class="content">
+
+   <div id="my_navbar">
+
+<nav class=" navbar  navbar-inverse my_navbar" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <!-- <span class="sr-only">Toggle navigation</span> -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="1.png" alt="dcfghjk"  ></a>
+
+        </div>
+       <div id="navbar" class="navbar-collapse collapse">
+             <ul class="nav navbar-nav">
+          <li><a href="index.html" >ГОЛОВНА</a></li>  
+          <li><a href="mount.html" >ГОРИ</a></li> 
+          <li><a href="fly.html" >В ПОВІТРІ</a></li>
+          <li><a href="jump.html">ДЖАМПІНГ</a></li>
+          <li><a href="raft.html">РАФТИНГ</a></li>
+          <li><a href="bike.html">ВЕЛОСПОРТ</a></li>
+          <li><a href="ResponsiveImageGallery\index.html">ГАЛЕРЕЯ</a></li>   
+           <li><a href="contacts.html">КОНТАКТИ</a></li>  
+              </ul>
+        </div>
+
+     </div>
+    </nav>
+  </div>
+
+    <form name="forma12" class="login" action="index.html" onsubmit="return ValidMail()&&ValidPhone()">
+
+    <h3>Оформлення заявки на подорож</h3>
+    <h4 class="green_fild padding">Особисті і контактні дані</h4>
+    <p id="span"></p><p id="span2"></p>
+
+    <p class="text_name">
+      <label for="surname">Прізвище*:</label><br>
+      <input type="text" name="surname" id="surname" class="border" required="required" oninvalid="this.setCustomValidity('Заповніть це поле')" oninput="setCustomValidity('')"><br>
+    </p>
+    
+    <p class="text_name ">
+      <label for="name">І'мя*:</label><br>
+      <span id="span"></span><input type="text" name="name" id="name" class="border" required="required" oninvalid="this.setCustomValidity('Заповніть це поле')" oninput="setCustomValidity('')"><br>
+    </p>
+    
+    <p class="text_name">
+      <label for="fathers_name">По батькові*:</label><br>
+      <input type="text" name="fathers_name" id="fathers_name" class="border" required="required" oninvalid="this.setCustomValidity('Заповніть це поле')" oninput="setCustomValidity('')"><br>
+    </p>
+    
+    <p class="text_name">
+      <label for="mail">Е-мейл*:</label><br>
+      <input type="text" name="mail" id="mail" class="border"><br>
+    </p>
+    
+    <p class="text_name">
+      <label for="phon_number">Номер телефону*:</label><br>
+      <input type="text" name="phon_number" id="phon_number" class="border" placeholder="063-889-0551"><br>
+    </p>
+
+    <h4 class="green_fild padding">Про відпочинок</h4>
+
+    <p class="text_name">
+      <label >Виберіть дату:</label><br>
+      <input type="text" value="dd-mm-yy" onfocus="this.select();_Calendar.lcs(this)"
+    onclick="event.cancelBubble=true;this.select();_Calendar.lcs(this)">
+         по <input type="text" value="dd-mm-yy" onfocus="this.select();_Calendar.lcs(this)"
+    onclick="event.cancelBubble=true;this.select();_Calendar.lcs(this)">
+
+    </p>
+
+      <p class="text_name hidden-xs hidden-sm">
+      <label>Вид відпочинку:</label><br>
+      <select id= "type" name="type"  class="border" style="max-width: 110px">
+        <option>Похід в гори</option>
+        <option>В повітрі</option>
+        <option>Рафтинг</option>
+        <option>Джампінг</option>
+        <option>Велоподорожі</option>
+        <option>Суміш</option>
+      </select>
+    </p>
+
+    <h4 class="green_fild padding">Загальна інформація</h4>
+
+    
+    <p  style="width: 95%; margin-right: 19%;"> Звідки дізнались про нас:
+      <input type="radio" name="information" value=""> від друзів  
+      <input type="radio" name="information" value=""> з інтернету
+      <input type="radio" name="information" value=""> з реклами
+    </p>
+
+    <p class="green_fild padding">
+      <input type="checkbox" name="information" id="checkbox" required="required"> З правилами відпочинку в компанії ознайомлені 
+    </p>
+
+    <p>
+      * - поля обов'язкові до заповнення
+    </p>
+   
+    <p class="form_button"> 
+      <input type="submit"  id = "button" value= "Відправити" class="btn-success button"/>
+    </p>
+
+  </form>
+
+<footer>
+  <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+  <a href="http://facebook.com" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+  <a href="http://plus.google.com" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+  <p class="pull-right hidden-xs"><a href="#">Back to top</a></p>
+  <p>Created by Web UI Team А · <a href="http://iit.nung.edu.ua/moodle/">WebUI · </a></p>
+</footer>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>
+
+
+
+
